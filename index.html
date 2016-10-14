@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LINUX 101</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+    <style media="screen">
+      .pro { color: #6A6; }
+      .con { color: #FA113D; }
+      h1, h2, h3, h4 {
+        font-family: 'Source Code Pro', monospace !important;
+      }
+
+      #q {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        display: inline;
+      }
+
+      cite { font-style: italic !important; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <canvas id="q" width="1000" height="550">LINUX 101</canvas>
+        </section>
+        <section>
+          <h2>Um pouco de história...</h2>
+          <span class="fragment fade-in"> <strong>...pelo começo</strong> </span>
+          <br/>
+          <span class="fragment fade-in"> <h3>UNIX</h3> </span>
+        </section>
+        <section>
+          <img src="img/senta.jpg" />
+        </section>
+        <section>
+          <img src="img/thompsonritchie.jpg" />
+          <br/>
+          <strong>Ken Thompson & Dennis Ritchie</strong>
+          <br/>
+          <strong>Criaram o Unix em 1969~1973 no Bell Labs(AT&T)</strong>
+        </section>
+        <section>
+          <strong>Brincando com um <strike>Raspberry</strike> PDP-11</strong>
+          <br/>
+          <img src="img/pdp11.jpg" />
+        </section>
+        <section>
+          <strong>O que esse UNIX tinha de tão legal?</strong>
+          <ul>
+            <span class="fragment fade-in"> <li>Multi-tarefa e multi-usuário</li> </span>
+            <span class="fragment fade-in">
+              <li>
+                Uso de arquivos como abstração de dispositivos e outros objetos
+                <ul>
+                  <li>Tudo é arquivo</li>
+                  <li>Pipe (Streams)</li>
+                </ul>
+              </li>
+            </span>
+            <span class="fragment fade-in">
+              <li>
+                Escrito em C
+                <ul>
+                  <li>Linguagem criada por Dennis Ritchie</li>
+                  <li>Alto nível</li>
+                  <li>Tornou o sistema portável</li>
+                </ul>
+              </li>
+            </span>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Filosofia UNIX</h4>
+          <p> <cite> Escreva programas que façam apenas uma coisa mas que façam bem feito. </cite></p>
+          <p> <cite> Escreva programas que trabalhem juntos. </cite></p>
+          <p> <cite> Escreva programas que manipulem streams de texto, pois esta é uma interface universal. </cite></p>
+        </section>
+
+        <section>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg" target="_blank">
+            <h4>Mapa</h4>
+          </a>
+        </section>
+
+        <section>
+          <h4>Mas tinha um "problema"...</h4>
+          <span class="fragment fade-in">
+            <img src="img/stallman.jpg" />
+            <br/>
+            <strong>para Richard Stallman</strong>
+          </span>
+        </section>
+
+        <section>
+          <h4>Ele queria um UNIX livre (Free)</h4>
+          <span class="fragment fade-in">
+          Que todo mundo recebesse uma cópia pudesse ser livre para <mark>usar</mark>, <mark>estudar</mark>, <mark>modificar</mark> e <mark>redistribuir</mark>.
+          <br/><br/>
+          <small>Essa é basicamente a missão da licença GPL (GNU Public License)</small>
+          <span>
+        </section>
+
+        <section>
+          <h4>E assim nasceu o projeto GNU</h4>
+          <span class="fragment fade-in">
+          Que todo mundo recebesse uma cópia pudesse ser livre para <mark>usar</mark>, <mark>estudar</mark>, <mark>modificar</mark> e <mark>redistribuir</mark>.
+          <br/><br/>
+          <small>Essa é basicamente a missão da licença GPL (GNU Public License)</small>
+          <span>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+        width: '100%',
+        height: '100%',
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+
+      $(function() {
+        var yPositions = Array(300).join(0).split('');
+        var ctx = q.getContext('2d');
+
+        var draw = function () {
+          ctx.fillStyle = 'rgba(0,0,0,.05)';
+          ctx.fillRect(0, 0, q.width, q.height);
+          ctx.fillStyle='#0F0';
+          ctx.font = '10pt Georgia';
+          yPositions.map(function(y, index) {
+            text = String.fromCharCode(1e2 + Math.random() * 33);
+            x = (index * 10) + 10;
+            q.getContext('2d').fillText(text, x, y);
+            if(y > 100 + Math.random() * 1e4) yPositions[index]=0;
+            else yPositions[index] = y + 10;
+          });
+
+          ctx.font = '42pt Source Code Pro';
+          ctx.textAlign = "center";
+          q.getContext('2d').fillText('LINUX 101', (q.width / 2), (q.height / 2) + 20);
+        };
+
+        setInterval(draw, 33);
+      });
+    </script>
+  </body>
+</html>

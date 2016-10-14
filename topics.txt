@@ -1,0 +1,56 @@
+:: Linux 101 ::
+- Breve História
+  - Unix
+  - GNU
+  - Kernel
+  - Aplicações: servidores, embedded, todo canto, menos no desktop :)
+  - Distribuições
+    - Mapa das distribuições
+    - As mais populares no distrowatch
+    - Desktops
+- Terminal
+  - Shell
+  - Bash
+- Comandos básicos (ls, pwd, cd, touch, mkdir, cat, less, mv, cp, rm (-rf), ps (aux))
+  - ctrl+d, ctrl+c
+  - Editor de texto (nano e vim)
+- Permissões
+  - ls -la
+  - octal de permissões
+  - chmod +x
+- Scripts
+  - #!
+  - exemplo
+- SSH
+  - Chave pública/privada
+  - Como gerar
+  - Como acessar servidor
+    - Putty
+    - WinSCP/FileZilla
+    - git bash
+- Pipe
+  - > out.txt
+  - Exemplos com sort, uniq, grep, sed, cut e awk
+- Onde obter ajuda?
+  - -h --help
+  - man page
+  - Google
+      - https://www.vivaolinux.com.br/
+      - https://linux.die.net/
+      - http://www.cyberciti.biz/
+      - https://www.digitalocean.com/community/tutorials
+- Como usar
+   - Instalar no Disco \o/
+   - Máquina Virtual, Vagrant ou Docker
+   - DigitalOcean, Linode, AWS
+   - No Windows: msys2, cygwin, gnuwin32, Windows 10
+   - http://www.technonutty.com/2015/07/9-online-linux-terminal-emulator-for-practice.html
+
+Fontes:
+http://linuxcommand.org/lc3_learning_the_shell.php
+http://www.bash.academy/
+http://www.computerhope.com/issues/ch000619.htm
+http://hsm.stackexchange.com/questions/2339/when-was-the-first-command-line-interface-developed
+http://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line
+https://www.learnenough.com/command-line-tutorial
+http://superuser.com/questions/169051/whats-the-difference-between-c-and-d-for-unix-mac-os-x-terminal
