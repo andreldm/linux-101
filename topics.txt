@@ -1,28 +1,28 @@
 :: Linux 101 ::
-- Breve História
+- Breve HistÃ³ria
   - Unix
   - GNU
   - Kernel
-  - Aplicações: servidores, embedded, todo canto, menos no desktop :)
-  - Distribuições
-    - Mapa das distribuições
+  - AplicaÃ§Ãµes: servidores, embedded, todo canto, menos no desktop :)
+  - DistribuiÃ§Ãµes
+    - Mapa das distribuiÃ§Ãµes
     - As mais populares no distrowatch
     - Desktops
 - Terminal
   - Shell
   - Bash
-- Comandos básicos (ls, pwd, cd, touch, mkdir, cat, less, mv, cp, rm (-rf), ps (aux))
+- Comandos bÃ¡sicos (ls, pwd, cd, touch, mkdir, cat, less, mv, cp, rm (-rf), ps (aux))
   - ctrl+d, ctrl+c
   - Editor de texto (nano e vim)
-- Permissões
+- PermissÃµes
   - ls -la
-  - octal de permissões
+  - octal de permissÃµes
   - chmod +x
 - Scripts
   - #!
   - exemplo
 - SSH
-  - Chave pública/privada
+  - Chave pÃºblica/privada
   - Como gerar
   - Como acessar servidor
     - Putty
@@ -41,7 +41,8 @@
       - https://www.digitalocean.com/community/tutorials
 - Como usar
    - Instalar no Disco \o/
-   - Máquina Virtual, Vagrant ou Docker
+   - Boot pelo Pendrive (LiveUSB)
+   - MÃ¡quina Virtual, Vagrant ou Docker
    - DigitalOcean, Linode, AWS
    - No Windows: msys2, cygwin, gnuwin32, Windows 10
    - http://www.technonutty.com/2015/07/9-online-linux-terminal-emulator-for-practice.html
