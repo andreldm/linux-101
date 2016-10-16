@@ -36,31 +36,32 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <canvas id="q" width="1000" height="550">LINUX 101</canvas>
+          <canvas id="q" width="1000" height="500">LINUX 101</canvas>
         </section>
         <section>
           <h2>Um pouco de história...</h2>
-          <span class="fragment fade-in"> <strong>...pelo começo</strong> </span>
           <br/>
-          <span class="fragment fade-in"> <h3>UNIX</h3> </span>
+          <span class="fragment fade-in"> <h3>...pelo começo</h3> </span>
+          <br/>
+          <span class="fragment fade-in"> <h1>UNIX</h1> </span>
         </section>
         <section>
-          <img src="img/senta.jpg" />
+          <img src="img/senta.jpg" width="60%" />
         </section>
         <section>
-          <img src="img/thompsonritchie.jpg" />
+          <img src="img/thompsonritchie.jpg" width="50%" />
           <br/>
-          <strong>Ken Thompson & Dennis Ritchie</strong>
+          <strong>Ken Thompson &amp; Dennis Ritchie</strong>
           <br/>
-          <strong>Criaram o Unix em 1969~1973 no Bell Labs(AT&T)</strong>
+          <strong>Criaram o Unix em 1969~1973 no Bell Labs(AT&amp;T)</strong>
         </section>
         <section>
           <strong>Brincando com um <strike>Raspberry</strike> PDP-11</strong>
           <br/>
-          <img src="img/pdp11.jpg" />
+          <img src="img/pdp11.jpg" width="50%"/>
         </section>
         <section>
-          <strong>O que esse UNIX tinha de tão legal?</strong>
+          <h3>O que esse UNIX tinha de tão legal?</h3>
           <ul>
             <span class="fragment fade-in"> <li>Multi-tarefa e multi-usuário</li> </span>
             <span class="fragment fade-in">
@@ -86,20 +87,19 @@
         </section>
 
         <section>
-          <h4>Filosofia UNIX</h4>
+          <h3>Filosofia UNIX</h3>
           <p> <cite> Escreva programas que façam apenas uma coisa mas que façam bem feito. </cite></p>
           <p> <cite> Escreva programas que trabalhem juntos. </cite></p>
           <p> <cite> Escreva programas que manipulem streams de texto, pois esta é uma interface universal. </cite></p>
         </section>
 
         <section>
-          <a href="https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg" target="_blank">
-            <h4>Mapa</h4>
-          </a>
+          <h4>Mapa</h4>
+          <img src="img/mapa-unix.svg" width="62%" style="background-color: white;" />
         </section>
 
         <section>
-          <h4>Mas tinha um "problema"...</h4>
+          <h4>Mas havia um "problema"...</h4>
           <span class="fragment fade-in">
             <img src="img/stallman.jpg" />
             <br/>
@@ -110,19 +110,420 @@
         <section>
           <h4>Ele queria um UNIX livre (Free)</h4>
           <span class="fragment fade-in">
-          Que todo mundo recebesse uma cópia pudesse ser livre para <mark>usar</mark>, <mark>estudar</mark>, <mark>modificar</mark> e <mark>redistribuir</mark>.
-          <br/><br/>
-          <small>Essa é basicamente a missão da licença GPL (GNU Public License)</small>
-          <span>
+            Que todo mundo recebesse uma cópia pudesse ser livre para <mark>usar</mark>, <mark>estudar</mark>, <mark>modificar</mark> e <mark>redistribuir</mark>.
+            <br/><br/>
+            <small>Essa é basicamente a missão da licença GPL (GNU Public License)</small>
+          </span>
         </section>
 
         <section>
           <h4>E assim nasceu o projeto GNU</h4>
           <span class="fragment fade-in">
-          Que todo mundo recebesse uma cópia pudesse ser livre para <mark>usar</mark>, <mark>estudar</mark>, <mark>modificar</mark> e <mark>redistribuir</mark>.
+            <img src="img/gnu.svg" width="44%" style="background-color: white;" />
+          </span>
+        </section>
+
+        <section>
+          <h4>Mas faltava algo...</h4>
+          <span class="fragment fade-in">
+            <img src="img/hurd.jpg" />
+            <br/>
+            <h4>O Kernel!!!</h4>
+          </span>
+        </section>
+
+        <section data-transition="slide-in none">
+          <h4>Oh! E agora, quem poderá me defender?</h4>
+
+          <span class="fragment fade-in current-visible">
+            <img src="img/chapolin.jpg" width="30%" />
+            <br/>
+            <strong>Eu! O Chapolin Colorado!</strong>
+          </span>
+        </section>
+
+        <section data-transition="none">
+          <h4>Oh! E agora, quem poderá me defender?</h4>
+          <img src="img/not-chapolin.jpg" width="30%" />
+          <br/>
+          <strong>Não, não foi o o Chapolin Colorado!</strong>
+        </section>
+
+        <section>
+          <h4>Linus Torvalds</h4>
+          <img src="img/linus1991.jpg" width="30%" />
+          <br/>
+          <strong>Esse estudante de Helsinki criou o Linux apenas por diversão.</strong>
+        </section>
+
+        <section>
+          <h4>Trecho do Anúncio, 25/08/1991</h4>
+          <strong>"(...) I'm doing a (<mark>free</mark>) operating system (just a hobby, won't be big and professional like <mark>gnu</mark>) for 386(486) AT clones.
+            <br/>
+            (...) I've currently ported <mark>bash(1.08) and gcc(1.40)</mark>, and things seem to work. (...) It is NOT portable (uses 386 task switching etc), and <mark>it probably never will support anything other than AT-harddisks</mark>, as that's all I have :-(
+          </strong>
+        </section>
+
+        <section>
+          <h4>Linus Torvalds</h4>
+          <img src="img/linus.png" width="30%" />
+          <br/>
+          <strong>O resto é história</strong>
+        </section>
+
+        <section>
+          <h4>Aplicações</h4>
+          <img src="img/linux-presence.svg" width="46%" style="background-color: white;"/>
+        </section>
+
+        <section>
+          <strong>Certo, mas e o <mark>Ubuntu</mark>? Ele não é Linux?</strong>
+          <br/>
+          <span class="fragment fade-in">
+            <strong>Sim, ele é umas das <strike>milhões</strike> <mark>centenas</mark> de distribuições</strong>
+          </span>
+        </section>
+
+        <section>
+          <a href="img/mapa-linux.svg" target="_blank">
+            <strong>Mapa das Distribuções</strong>
+          </a>
+        </section>
+
+        <section>
+          <h4>As Distros mais Populares</h4>
+          <img src="img/distros.svg" width="80%" style="background-color: white;"/>
+        </section>
+
+        <section>
+          <strong>Diferentemente dos outros sistemas como Windows, macOS, iOS e etc</strong>
+          <br/>
+          <strong>não temos apenas uma "interface gráfica" (ambiente desktop)</strong>
+        </section>
+
+        <section>
+          <h4>Unity</h4>
+          <img src="img/unity.png" width="75%"/>
+        </section>
+
+        <section>
+          <h4>Gnome</h4>
+          <img src="img/gnome.png" width="75%"/>
+        </section>
+
+        <section>
+          <h4>KDE</h4>
+          <img src="img/kde.png" width="75%"/>
+        </section>
+
+        <section>
+          <h4>Xfce</h4>
+          <img src="img/xfce.png" width="75%"/>
+        </section>
+
+        <section>
+          <strong>Vamos ao que interesse para essa apresentação...</strong>
+          <br/>
+          <span class="fragment fade-in">
+            <strong>mas antes algumas definições</strong>
+          </span>
+        </section>
+
+        <section>
+          <h4>Terminal</h4>
+          <img src="img/terminal.jpg" width="45%"/>
+          <br/>
+          <strong>"Interface de comunicação com computador, abstrato"</strong>
+        </section>
+
+        <section>
+          <h4>Console</h4>
+          <img src="img/console.jpg" width="45%"/>
+          <br/>
+          <strong>"Hardware, físico. Esse termo também é utilizado para o console de jogos."</strong>
+          <br/>
+          <strong>Muito usado para indicar o seu equivalente virtual (confuso, não?).</strong>
+        </section>
+
+        <section>
+          <h4>Shell</h4>
+          <img src="img/shell.png" width="35%"/>
+          <br/>
+          <strong>"Um aplicação que permite executar comandos."</strong>
+        </section>
+
+        <section>
+          <h4>Linha de Comando (CLI)</h4>
+          <img src="img/cli.png" width="85%"/>
+          <br/>
+          <strong>"Basicamente qualquer coisa que permite a entrada de comandos."</strong>
+        </section>
+
+        <section>
+          <h4>Outro exemplo de CLI</h4>
+          <img src="img/cli2.png" width="58%"/>
+        </section>
+
+        <section>
+          <strong>Assim como temos várias opções de ambientes gráficos</strong>
+          <br/>
+          <strong>Temos algumas opções de Shell:</strong>
           <br/><br/>
-          <small>Essa é basicamente a missão da licença GPL (GNU Public License)</small>
-          <span>
+          <span class="fragment fade-in">
+            <strong>sh&emsp;csh&emsp;ksh&emsp;tcsh&emsp;<mark>bash</mark>&emsp;ash&emsp;zsh&emsp;fish</strong>
+          </span>
+          <br/><br/>
+          <span class="fragment fade-in">
+            <strong>Mas vamos focar no bash que é o mais popular</strong>
+          </span>
+        </section>
+
+        <section>
+          <h4>Comandos</h4>
+          <img src="img/comando.png" width="58%"/>
+        </section>
+
+        <section>
+          <h4>Anatomia do Comando</h4>
+          <img src="img/comando-anatomia.png" width="58%"/>
+        </section>
+
+        <section>
+          <h4>Comandos Básicos</h4>
+          <ul>
+            <li>ls</li> <li>cd</li> <li>pwd</li> <li>touch</li> <li>mkdir</li> <li>cat</li> <li>less</li> <li>mv</li> <li>cp</li> <li>rm</li>
+          </ul>
+        </section>
+
+        <section>
+          <strong>ls (list)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ ls
+Desktop    Dropbox  projects  'VirtualBox VMs'
+Downloads  music    tools     workspace
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>cd (change directory)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ cd projects/
+[andre@mars projects]$
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>pwd (print name of current/working directory)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ cd projects/
+[andre@mars projects]$ pwd
+/home/andre/projects
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>touch (atualizar timestamp de arquivos)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ touch a.txt
+[andre@mars ~]$ ls -l a.txt
+-rw-r--r-- 1 andre andre 0 Oct 15 21:11 a.txt
+[andre@mars ~]$ touch a.txt
+[andre@mars ~]$ ls -l a.txt
+-rw-r--r-- 1 andre andre 0 Oct 15 21:12 a.txt
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>mkdir (make directories)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ mkdir test
+[andre@mars ~]$ cd test
+[andre@mars test]$
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>cat (concatenate files and print on the standard output)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ cat a.txt
+Hello World!
+
+[andre@mars ~]$ cat a.txt b.txt
+Hello World!
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget malesuada le
+o. Integer et justo tincidunt, ultrices tortor a, convallis nunc. Aenean ut diam
+vel lectus scelerisque placerat. Vivamus a rutrum mi, eget vestibulum metus. Ut
+vel dolor libero.
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>less (opposite of more)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ less /var/log/Xorg.0.log
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>mv (move (rename) files)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ touch a.txt
+[andre@mars ~]$ mkdir a
+[andre@mars ~]$ mv a.txt a
+[andre@mars ~]$ ls a
+a.txt
+[andre@mars ~]$ ls
+a        Downloads  music     tools             workspace
+Desktop  Dropbox    projects  'VirtualBox VMs'
+[andre@mars ~]$ cd a
+[andre@mars a]$ mv a.txt b.txt
+[andre@mars a]$ ls
+b.txt
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>cp (copy files and directories)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ touch a.txt
+[andre@mars ~]$ mkdir a
+[andre@mars ~]$ cp a.txt a
+[andre@mars ~]$ ls a
+a.txt
+[andre@mars ~]$ ls . # este ponto é opcional, indica esta pasta
+a      Desktop    Dropbox  projects  'VirtualBox VMs'
+a.txt  Downloads  music    tools     workspace
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>rm (remove files or directories)</strong><br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ rm a
+rm: cannot remove 'a': Is a directory
+[andre@mars ~]$ rm -r a
+[andre@mars ~]$ rm a.txt
+[andre@mars ~]$ ls
+Desktop    Dropbox  projects  'VirtualBox VMs'
+Downloads  music    tools     workspace
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>Pronto, agora vamos ver coisas mais legais</strong>
+        </section>
+
+        <section>
+          <h4>stdout &amp; stdin</h4>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ echo "Foo" &gt; a.txt
+[andre@mars ~]$ more &lt; a.txt
+Foo
+          </code></pre>
+        </section>
+
+        <section>
+          <h4><mark>pipe</mark></h4>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ ps aux | grep fox
+andre    10359  102  3.7 1210024 306684 ?      Sl   21:43   0:03 firefox
+andre    10432  0.0  0.0  10764  2284 pts/1    S+   21:43   0:00 grep fox
+[andre@mars ~]$ ps aux | grep andre | tr -s " " | cut -d" " -f11 | sort | uniq | wc -l
+59
+          </code></pre>
+        </section>
+
+        <section>
+          <h4>Permissões</h4>
+          <pre><code data-trim data-noescape>
+[andre@mars log]$ ls -ls
+total 836
+  4 -rw-------  1 root utmp              1152 Oct  2 16:31 btmp
+  0 -rw-------  1 root utmp                 0 Sep  1 00:00 btmp.1
+  4 drwxr-xr-x  2 root root              4096 Oct  9 14:38 cups
+ 12 -rw-------  1 root root             32032 Oct 15 12:56 faillog
+  8 drwxr-sr-x+ 4 root systemd-journal   4096 Apr 16 12:36 journal
+ 40 -rw-r--r--  1 root root            292292 Oct  2 16:32 lastlog
+  4 drwxr-xr-x  2 root root              4096 Sep 30  2015 old
+320 -rw-r--r--  1 root root            319630 Oct 14 00:23 pacman.log
+  4 drwxr-xr-x  2 root root              4096 May  7 16:19 samba
+  4 drwxr-xr-x  2 root root              4096 Sep 19  2015 speech-dispatcher
+272 -rw-rw-r--  1 root utmp            271104 Oct 15 12:56 wtmp
+108 -rw-r--r--  1 root root            106951 Oct 15 12:56 Xorg.0.log
+ 40 -rw-r--r--  1 root root             37049 Oct 15 12:01 Xorg.0.log.old
+ 16 -rw-r--r--  1 root bumblebee        12800 Apr 16 13:40 Xorg.8.log
+          </code></pre>
+        </section>
+
+        <section>
+          <h4>Permissões</h4>
+          <img src="img/permissions1.png" width="70%"/>
+        </section>
+
+        <section>
+          <h4>Permissões</h4>
+          <img src="img/permissions2.png" width="70%"/>
+        </section>
+
+        <section>
+          <h4>Permissões</h4>
+          <img src="img/permissions3.png" width="40%"/>
+        </section>
+
+        <section>
+          <h4>chmod</h4>
+          [andre@mars ~]$ chmod +x foo.sh
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ ls -l foo.sh
+-rw-r--r-- 1 andre andre 22 Oct 15 22:15 foo.sh
+[andre@mars ~]$ chmod +x foo.sh
+[andre@mars ~]$ ls -l foo.sh
+-rwxr-xr-x 1 andre andre 22 Oct 15 22:15 foo.sh
+[andre@mars ~]$ chmod 700 foo.sh
+[andre@mars ~]$ ls -l foo.sh
+-rwx------ 1 andre andre 22 Oct 15 22:15 foo.sh
+          </code></pre>
+        </section>
+
+        <section>
+          <h4>Permissões</h4>
+          <strong>Calma, não entre em pânico, existem calculadoras online.</strong>
+          <br/>
+          <strong>Google: unix octal permissions</strong>
+        </section>
+
+        <section>
+          <h4>Usuário Root</h4>
+          <strong>O todo poderoso de um sistema Unix.</strong>
+          <br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ su
+Password:
+[root@mars andre]# echo "I've got the power!"
+          </code></pre>
+        </section>
+
+        <section>
+          <h4>Usuário Root</h4>
+          <img src="img/heman.gif" width="50%"/>
+        </section>
+
+        <section>
+          <h4>sudo</h4>
+          <strong>Executa um comando como outro usuário, por padrão root.</strong>
+          <br/>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ sudo systemctl start mariadb
+Password:
+[andre@mars ~]$
+          </code></pre>
+        </section>
+
+        <section>
+          <strong>Mas lembre-se to que Tio ben disse</strong>
+          <br/>
+          <img src="img/tioben.jpg" width="60%"/>
         </section>
 
       </div>
@@ -149,25 +550,25 @@
       });
 
       $(function() {
-        var yPositions = Array(300).join(0).split('');
+        var positions = Array(100).join(0).split(''); // positons in y axis
         var ctx = q.getContext('2d');
 
         var draw = function () {
-          ctx.fillStyle = 'rgba(0,0,0,.05)';
+          ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
           ctx.fillRect(0, 0, q.width, q.height);
           ctx.fillStyle='#0F0';
           ctx.font = '10pt Georgia';
-          yPositions.map(function(y, index) {
-            text = String.fromCharCode(1e2 + Math.random() * 33);
-            x = (index * 10) + 10;
-            q.getContext('2d').fillText(text, x, y);
-            if(y > 100 + Math.random() * 1e4) yPositions[index]=0;
-            else yPositions[index] = y + 10;
+          positions.map(function(y, index) {
+            var char = String.fromCharCode(33 + Math.random() * 94);
+            var x = (index * 10) + 10;
+            ctx.fillText(char, x, y);
+            if (y > 100 + Math.random() * 1e4) positions[index] = 0;
+            else positions[index] = y + 10;
           });
 
-          ctx.font = '42pt Source Code Pro';
+          ctx.font = '42pt monospace';
           ctx.textAlign = "center";
-          q.getContext('2d').fillText('LINUX 101', (q.width / 2), (q.height / 2) + 20);
+          ctx.fillText('LINUX 101', (q.width / 2), (q.height / 2) + 20);
         };
 
         setInterval(draw, 33);

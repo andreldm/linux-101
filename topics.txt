@@ -14,8 +14,12 @@
 - Comandos básicos (ls, pwd, cd, touch, mkdir, cat, less, mv, cp, rm (-rf), ps (aux))
   - ctrl+d, ctrl+c
   - Editor de texto (nano e vim)
+- Pipe
+  - > out.txt
+  - Exemplos com sort, uniq, grep, sed, cut e awk
 - Permissões
   - ls -la
+  - root
   - octal de permissões
   - chmod +x
 - Scripts
@@ -28,9 +32,7 @@
     - Putty
     - WinSCP/FileZilla
     - git bash
-- Pipe
-  - > out.txt
-  - Exemplos com sort, uniq, grep, sed, cut e awk
+
 - Onde obter ajuda?
   - -h --help
   - man page
@@ -48,6 +50,7 @@
    - http://www.technonutty.com/2015/07/9-online-linux-terminal-emulator-for-practice.html
 
 Fontes:
+https://www.gnu.org/gnu/thegnuproject.en.html
 http://linuxcommand.org/lc3_learning_the_shell.php
 http://www.bash.academy/
 http://www.computerhope.com/issues/ch000619.htm
