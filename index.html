@@ -39,6 +39,16 @@
           <canvas id="q" width="1000" height="500">LINUX 101</canvas>
         </section>
         <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li>História do Linux</li>
+            <li>Comandos básicos</li>
+            <li>Alguns truques</li>
+            <li>SSH</li>
+            <li>Como aprender/obter ajuda</li>
+          </ul>
+        </section>
+        <section>
           <h2>Um pouco de história...</h2>
           <br/>
           <span class="fragment fade-in"> <h3>...pelo começo</h3> </span>
@@ -53,7 +63,7 @@
           <br/>
           <strong>Ken Thompson &amp; Dennis Ritchie</strong>
           <br/>
-          <strong>Criaram o Unix em 1969~1973 no Bell Labs(AT&amp;T)</strong>
+          <strong>Criaram o Unix em 1969~1973 no Bell Labs (AT&amp;T)</strong>
         </section>
         <section>
           <strong>Brincando com um <strike>Raspberry</strike> PDP-11</strong>
@@ -493,6 +503,54 @@ total 836
         </section>
 
         <section>
+          <h4>Scripts</h4>
+          <strong>Shebang, a.k.a. hashbang, indica qual será o interpretador do scripts (independente da extensão).</strong>
+          <br/><br/>
+          <ul>
+            <li>#!/bin/sh</li>
+            <li>#!/bin/bash</li>
+            <li>#!/usr/bin/perl -T</li>
+            <li>#!/usr/bin/ruby</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Scripts</h4>
+          <pre><code data-trim data-noescape>
+#!/usr/bin/python2
+import gtk
+
+class PyApp(gtk.Window):
+    def __init__(self):
+        super(PyApp, self).__init__()
+
+        self.set_title("Buttons")
+        self.set_size_request(250, 200)
+        self.set_position(gtk.WIN_POS_CENTER)
+
+        btn1 = gtk.Button("Click me")
+        btn1.connect("clicked", self.on_clicked)
+
+        fixed = gtk.Fixed()
+        fixed.put(btn1, 20, 30)
+
+        self.connect("destroy", gtk.main_quit)
+        self.add(fixed)
+        self.show_all()
+
+    def on_clicked(self, widget):
+        md = gtk.MessageDialog(self,
+            gtk.DIALOG_DESTROY_WITH_PARENT, gtk.MESSAGE_INFO,
+            gtk.BUTTONS_CLOSE, "Linux Rules!")
+        md.run()
+        md.destroy()
+
+PyApp()
+gtk.main()
+          </code></pre>
+        </section>
+
+        <section>
           <h4>Usuário Root</h4>
           <strong>O todo poderoso de um sistema Unix.</strong>
           <br/>
@@ -513,7 +571,7 @@ Password:
           <strong>Executa um comando como outro usuário, por padrão root.</strong>
           <br/>
           <pre><code data-trim data-noescape>
-[andre@mars ~]$ sudo systemctl start mariadb
+[andre@mars ~]$ sudo systemctl start mysqld
 Password:
 [andre@mars ~]$
           </code></pre>
@@ -523,6 +581,118 @@ Password:
           <strong>Mas lembre-se to que Tio ben disse</strong>
           <br/>
           <img src="img/tioben.jpg" width="60%"/>
+        </section>
+
+        <section>
+          <h2>SSH</h2>
+          <strong>Secure Shell</strong>
+        </section>
+
+        <section>
+          <strong>Gerando uma par de chaves RSA</strong>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+          </code></pre>
+          <p>Serão criados os arquivos id_rsa(privado) e id_rsa.pub(público) em ~/.ssh</p>
+        </section>
+
+        <section>
+          <strong>Acessando um servidor</strong>
+          <pre><code data-trim data-noescape>
+[andre@mars ~]$ ssh root@192.168.1.10
+          </code></pre>
+          <p>A chave pública (id_rsa.pub) do usuário (andre) deve estar no arquivo /root/.ssh/authorized_keys</p>
+        </section>
+
+        <section>
+          <strong>SCP (Secure Copy)</strong>
+          <pre><code data-trim data-noescape>
+# From local to remote
+$ scp your_username@remotehost.edu:foobar.txt /some/local/directory
+
+# From remote to local
+$ scp foobar.txt your_username@remotehost.edu:/some/remote/directory
+          </code></pre>
+        </section>
+
+        <section>
+          <h4>E no Windows?</h4>
+          <ul>
+            <li>PuTTY / PuTTYgen</li>
+            <li>WinSCP / FileZilla</li>
+            <li>Git Bash</li>
+          </ul>
+        </section>
+
+        <section>
+          <strong>Como aprender esses todos esses comandos e opções?</strong>
+          </br>
+          <ul>
+            <li>-h / --help</li>
+            <li>man pages</li>
+            <li><a href="https://www.vivaolinux.com.br/" target="_blank">vivaolinux.com.br</a></li>
+            <li><a href="https://linux.die.net/">linux.die.net</a></li>
+            <li><a href="http://www.cyberciti.biz/">cyberciti.biz/</a></li>
+            <li><a href="https://www.digitalocean.com/community/tutorials">digitalocean.com/community/tutorials</a></li>
+          </ul>
+
+          </br></br>
+
+          <span class="fragment fade-in">
+            <img src="img/google.svg" alt="Google" height="100px" style="background-color: white;"/>
+          </span>
+        </section>
+
+        <section>
+          <h4>Como começar a usar Linux?</h4>
+          <ul>
+            <span class="fragment fade-in"><li>Instalar no Disco \o/</li></span>
+            <span class="fragment fade-in"><li>Boot pelo Pendrive (LiveUSB)</li></span>
+            <span class="fragment fade-in"><li>Máquina Virtual, Vagrant ou Docker</li></span>
+            <span class="fragment fade-in"><li>DigitalOcean, Linode, AWS...</li></span>
+            <span class="fragment fade-in"><li>No Windows: msys2, cygwin, git bash, gnuwin32, Windows 10</li></span>
+            <span class="fragment fade-in"><li><a href="http://www.technonutty.com/2015/07/9-online-linux-terminal-emulator-for-practice.html">No Browser</a></li></span>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Coisas legais que não falei</h4>
+          <ul>
+            <span class="fragment fade-in"><li>Completion</li></span>
+            <span class="fragment fade-in"><li>Gerenciador de pacotes</li></span>
+            <span class="fragment fade-in"><li>Symlink</li></span>
+            <span class="fragment fade-in"><li>Wine</li></span>
+            <span class="fragment fade-in"><li>Containers (Docker)</li></span>
+            <span class="fragment fade-in"><li>systemd</li></span>
+            <span class="fragment fade-in"><li>X11 over SSH</li></span>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Fontes</h4>
+          <small>
+            <div >https://www.gnu.org/gnu/thegnuproject.en.html</div>
+            <div>http://linuxcommand.org/lc3_learning_the_shell.php</div>
+            <div>http://www.bash.academy/</div>
+            <div>http://www.computerhope.com/issues/ch000619.htm</div>
+            <div>http://hsm.stackexchange.com/questions/2339/when-was-the-first-command-line-interface-developed</div>
+            <div>http://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line</div>
+            <div>https://www.learnenough.com/command-line-tutorial</div>
+            <div>http://superuser.com/questions/169051/whats-the-difference-between-c-and-d-for-unix-mac-os-x-terminal</div>
+          </small>
+        </section>
+
+        <section style="background: url('img/questions.jpg') no-repeat fixed center; height: 95%">
+          <h1 style="position: relative; top: 40%;">Questions?</h1>
+        </section>
+
+        <section>
+          <strong>Espero que tenham curtido e que a reação de vocês ao ouvirem Linux não seja mais essa:</strong>
+          <img src="img/reaction.gif" alt="wtf" />
+        </section>
+
+        <section>
+          <img src="img/thanks.gif" alt="thanks" height="800px" style="background-color: white;"/>
         </section>
 
       </div>

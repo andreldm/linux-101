@@ -32,7 +32,6 @@
     - Putty
     - WinSCP/FileZilla
     - git bash
-
 - Onde obter ajuda?
   - -h --help
   - man page
@@ -42,12 +41,20 @@
       - http://www.cyberciti.biz/
       - https://www.digitalocean.com/community/tutorials
 - Como usar
-   - Instalar no Disco \o/
-   - Boot pelo Pendrive (LiveUSB)
-   - Máquina Virtual, Vagrant ou Docker
-   - DigitalOcean, Linode, AWS
-   - No Windows: msys2, cygwin, gnuwin32, Windows 10
-   - http://www.technonutty.com/2015/07/9-online-linux-terminal-emulator-for-practice.html
+  - Instalar no Disco \o/
+  - Boot pelo Pendrive (LiveUSB)
+  - Máquina Virtual, Vagrant ou Docker
+  - DigitalOcean, Linode, AWS
+  - No Windows: msys2, cygwin, git bash, gnuwin32, Windows 10
+  - http://www.technonutty.com/2015/07/9-online-linux-terminal-emulator-for-practice.html
+- Coisas legais que não falei:
+  - Completion
+  - Gerenciador de pacotes
+  - Symlink
+  - Wine
+  - Containers (Docker)
+  - systemd
+  - X11 over SSH
 
 Fontes:
 https://www.gnu.org/gnu/thegnuproject.en.html
